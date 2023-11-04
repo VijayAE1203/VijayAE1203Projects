@@ -1,0 +1,5 @@
+asammdf[gui]
+watchdog
+pyyaml
+matplotlib
+spicy

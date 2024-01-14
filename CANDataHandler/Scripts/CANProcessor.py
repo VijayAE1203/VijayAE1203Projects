@@ -1,9 +1,10 @@
 from CAN2CSVUtils import MF4toCSVConverter
-from Utils import getPaths, parseAlerts, getSamplingFrequency
+from Utils import getPaths, parseAlerts, getSamplingFrequency, makeDir
 import glob
 import pandas as pd
 import matplotlib.pyplot as plt
 from spicy import signal
+from openpyxl import Workbook
 
 class CANProcessor():
     def __init__(self, MF4FilePath):
@@ -11,13 +12,14 @@ class CANProcessor():
         self.rawDataCSVPath = getPaths('rawDataCSVPath')
         self.extractedDataCSVPath = getPaths('extractedDataCSVPath')
         self.dbcFilePath = getPaths('dbcFilePath')
-        self.convertExtractedMF4toCSV()
+        self.generateRawCANCSV()
+        self.generateDecodedCANCSV()
 
-    def convertRawMF4toCSV(self):
+    def generateRawCANCSV(self):
         self.rawCSVFileFolder = MF4toCSVConverter(self.MF4FilePath, self.rawDataCSVPath, False)
         return self.rawCSVFileFolder
      
-    def convertExtractedMF4toCSV(self):
+    def generateDecodedCANCSV(self):
         self.extractedCSVFileFolder = MF4toCSVConverter(self.MF4FilePath, self.extractedDataCSVPath, self.dbcFilePath, True)
         return self.extractedCSVFileFolder
     
@@ -45,7 +47,7 @@ class CANProcessor():
                     criticalPoints['value'].append(dataPoint)
                 idx+=1
             alert['criticalPoints'] = criticalPoints
-            print(alert)
+        self.exportCriticalData()
     
     def filterData(self, alert):
         signalData, signalTimestamp, file = self.getData(alert['name'])
@@ -58,6 +60,25 @@ class CANProcessor():
         filteredSignalData = signal.filtfilt(b,a,signalData)
         return list(filteredSignalData), signalTimestamp
     
-    def exportCriticalData():
-        pass
+    def exportCriticalData(self):
+        alertsPath = getPaths('alertsFolderPath')
+        MF4FileName = self.extractedCSVFileFolder.split('\\')[-1]
+        criticalDataFolder = alertsPath + '\\' + MF4FileName
+        makeDir(criticalDataFolder)
+        workbook = Workbook()
+        for idx in range(len(self.alerts)):
+            if idx==0:
+                sheet = workbook.active
+                sheet.title = 'Alert' + str(idx+1)
+            else:
+                sheet = workbook.create_sheet(title='Alert'+str(idx+1))
+            sheet['A1'] = 'Timestamp'
+            sheet['B1'] = self.alerts[idx]['name']
+            timestamps = self.alerts[idx]['criticalPoints']['timestamp']
+            data = self.alerts[idx]['criticalPoints']['value']
+            dataLength = len(data)
+            for idx in range(dataLength):
+                sheet['A'+str(idx+2)] = timestamps[idx]
+                sheet['B'+str(idx+2)] = data[idx]
+        workbook.save(criticalDataFolder+'\\criticalData.xlsx')
             

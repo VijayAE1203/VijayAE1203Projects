@@ -14,10 +14,8 @@ class MF4Handler(FileSystemEventHandler):
 
         #TODO: Add threading
         if fileExtension=='MF4':
-            CANProcessorInstance = CANProcessor(absoluteFilePath)
             print("Started conversion from MF4 to CSV")
-            CANProcessorInstance.convertRawMF4toCSV()
-            CANProcessorInstance.convertExtractedMF4toCSV()
+            CANProcessorInstance = CANProcessor(absoluteFilePath)
             print("Converted recent mf4 to csv")
             CANProcessorInstance.checkAlerts()
             del CANProcessorInstance
@@ -27,7 +25,7 @@ class MF4Handler(FileSystemEventHandler):
 if __name__ == "__main__":
     observer = Observer()
     eventHandler = MF4Handler()
-    observer.schedule(eventHandler, path = getPaths('logFolderPath'), recursive = False)
+    observer.schedule(eventHandler, path = getPaths('watchFolderPath'), recursive = False)
     observer.start()
     try:
         while True:

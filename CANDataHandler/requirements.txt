@@ -3,3 +3,4 @@ watchdog
 pyyaml
 matplotlib
 spicy
+openpyxl

@@ -4,4 +4,4 @@
 - 🌱 I'm posting my projects in Github to store them securely and let others learn from it if interested
 - 🌱 I'm uploading each project as a subfolder. Each project would have its own README that would atleast give a high-level detail on what the project is aiming to achieve
 - 📫 If you have any questions, you can reach me at vjlatchu@gmail.com
-- ⚡ Fun fact: I can always find a reason to eat out!
+- ⚡ Fun fact: I can mess up multiple things simultaneously!

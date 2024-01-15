@@ -62,6 +62,7 @@ class CANProcessor():
     
     def exportCriticalData(self):
         alertsPath = getPaths('alertsFolderPath')
+        makeDir(alertsPath)
         MF4FileName = self.extractedCSVFileFolder.split('\\')[-1]
         criticalDataFolder = alertsPath + '\\' + MF4FileName
         makeDir(criticalDataFolder)

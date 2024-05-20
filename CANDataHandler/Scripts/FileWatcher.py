@@ -3,6 +3,7 @@ from watchdog.events import FileSystemEventHandler
 from CANProcessor import CANProcessor
 import os
 from Utils import getPaths
+import time
 
 class MF4Handler(FileSystemEventHandler):
     def on_created(self, event):
@@ -29,7 +30,7 @@ if __name__ == "__main__":
     observer.start()
     try:
         while True:
-            pass
+            time.sleep(1)
     except KeyboardInterrupt:
         observer.stop()
     observer.join()

@@ -1,9 +1,7 @@
 This folder has the contents of the project 'CANDataHandler'
 
 # Purpose:
-* This project aims at showing a concept of test automation that could be expanded and used as a tool for commercial fleet maintenance or 
-vehicle testing, with the assumption that the vehicles or machines under test would have a telematics device that pushes CAN data to a
-network folder.
+* This project aims at automatically decoding CAN log files from vehicles in *.mf4 format using a CAN database file and storing the physical values in a timeseries format in *.csv format. During this process, it also monitors the channels for any outliers and stores the outliers separately. Some of these settings are configurable to match individual needs.
 * The current does the following tasks
     * Monitors the 'CANData' folder for any new MF4 files
     * Uses a CAN dbc file to convert the MF4 files to raw physical values and store them in separate spreadsheets

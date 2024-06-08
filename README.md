@@ -1,6 +1,6 @@
 - 👋 Hi, This is Vijay Lakshmanan
 - 👀 I have a Master's in Automotive Engineering and I am currently working as a Test Engineer for John Deere
-- 🌱 I’m interested in this field and I do some personal projects for fun and learning which I will be uploading here
+- 🌱 I’m interested in learning new skills that will keep me relevant in the ever-changing tech & engineering industries and I do some personal projects for fun and which I will be uploading here
 - 🌱 Each project will be under a subfolder and will have its own README that will give a high-level overview on what the project is aiming to achieve
 - 📫 If you have any questions, you can reach me at vjlatchu@gmail.com
 - ⚡ Fun fact about me: I drive a Camry like its a Supra!

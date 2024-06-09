@@ -8,6 +8,8 @@
 7. "create-wrapper-procedure" creates an outer procedure to add a new customer and also fill the customer's full name based on the first 
     and last name. Two stored procedures are called within a transaction to prevent from multiple sessions updating the table concurrently.
 8. "modify-customer-table" is another sql script that modifies the database. Just a learning experience.
+9. The python application folder has a python script that connects to the MySQL server (using mysql-connector-python module) and closes the connection. 
+    A python application can be developed using this and can be tied to a frontend to create a website.
 
 How to run/play with each script:
 1. Just run the scripts in the following order to see what they do:
@@ -17,3 +19,4 @@ How to run/play with each script:
   d. create-wrapper-procedure
 
 2. You'd need to install MySQL and setup the server and create a local instance to connect to the server, before trying to run the scripts.
+

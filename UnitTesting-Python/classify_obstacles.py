@@ -5,7 +5,7 @@ classify_obstacles function: Classifies obstacles based on their distances from 
 @param distance Distance of the objects in a list format
 @return obstacles Dictionary with keys Close, Medium and Far and corresponding values
 """
-def classify_obstacles(distance=[]):
+def classify_obstacles(distance: list=[])->dict:
     
     #Initialize a dictionary with empty lists
     obstacles = {"Close":[],
@@ -13,7 +13,7 @@ def classify_obstacles(distance=[]):
                  "Far":[]}
     
     #Check for empty list
-    if len(distance)==0:
+    if len(distance) == 0:
         return obstacles
     #Categorize the distances
     # 0 to 5 - Close

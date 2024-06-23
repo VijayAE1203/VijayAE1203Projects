@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuites tests="4" failures="0" disabled="0" errors="0" time="0" timestamp="2024-06-23T00:08:01.097" name="AllTests">
-  <testsuite name="classify_obstacles_test" tests="4" failures="0" disabled="0" skipped="0" errors="0" time="0" timestamp="2024-06-23T00:08:01.097">
-    <testcase name="HandlesTooFarInputs" file="google_test/classify_obstacles_test.cpp" line="9" status="run" result="completed" time="0" timestamp="2024-06-23T00:08:01.097" classname="classify_obstacles_test" />
-    <testcase name="HandlesNegativeInputs" file="google_test/classify_obstacles_test.cpp" line="24" status="run" result="completed" time="0" timestamp="2024-06-23T00:08:01.097" classname="classify_obstacles_test" />
-    <testcase name="HandlesValidInputs" file="google_test/classify_obstacles_test.cpp" line="39" status="run" result="completed" time="0" timestamp="2024-06-23T00:08:01.097" classname="classify_obstacles_test" />
-    <testcase name="HandlesEdgeCases" file="google_test/classify_obstacles_test.cpp" line="63" status="run" result="completed" time="0" timestamp="2024-06-23T00:08:01.097" classname="classify_obstacles_test" />
-  </testsuite>
-</testsuites>

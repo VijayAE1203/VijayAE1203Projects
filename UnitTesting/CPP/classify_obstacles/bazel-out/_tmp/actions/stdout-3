@@ -1,0 +1,11 @@
+C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.37.32822\include\utility(270): warning C4244: 'initializing': conversion from '_Ty' to '_Ty1', possible loss of data
+        with
+        [
+            _Ty=int
+        ]
+        and
+        [
+            _Ty1=float
+        ]
+google_test/classify_obstacles_test.cpp(45): note: see reference to function template instantiation 'std::pair<float,std::string>::pair<int,const char*,0>(std::pair<int,const char *> &&) noexcept(false)' being compiled
+google_test/classify_obstacles_test.cpp(45): note: see the first reference to 'std::pair<float,std::string>::pair' in 'classify_obstacles_test_HandlesValidInputs_Test::TestBody'

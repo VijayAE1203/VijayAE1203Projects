@@ -1,0 +1,19 @@
+Executing tests from //google_test:classify_obstacles_test
+-----------------------------------------------------------------------------
+Running main() from gmock_main.cc
+[==========] Running 4 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 4 tests from classify_obstacles_test
+[ RUN      ] classify_obstacles_test.HandlesTooFarInputs
+[       OK ] classify_obstacles_test.HandlesTooFarInputs (0 ms)
+[ RUN      ] classify_obstacles_test.HandlesNegativeInputs
+[       OK ] classify_obstacles_test.HandlesNegativeInputs (0 ms)
+[ RUN      ] classify_obstacles_test.HandlesValidInputs
+[       OK ] classify_obstacles_test.HandlesValidInputs (0 ms)
+[ RUN      ] classify_obstacles_test.HandlesEdgeCases
+[       OK ] classify_obstacles_test.HandlesEdgeCases (0 ms)
+[----------] 4 tests from classify_obstacles_test (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 4 tests.

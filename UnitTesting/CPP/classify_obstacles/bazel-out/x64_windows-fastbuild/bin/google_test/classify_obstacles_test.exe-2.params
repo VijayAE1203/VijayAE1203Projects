@@ -1,0 +1,12 @@
+/nologo
+/OUT:bazel-out/x64_windows-fastbuild/bin/google_test/classify_obstacles_test.exe
+bazel-out/x64_windows-fastbuild/bin/google_test/_objs/classify_obstacles_test/classify_obstacles_test.obj
+bazel-out/x64_windows-fastbuild/bin/external/com_google_googletest/gtest_main.lib
+bazel-out/x64_windows-fastbuild/bin/external/com_google_googletest/gtest.lib
+bazel-out/x64_windows-fastbuild/bin/classify_obstacles_lib/classify_obstacles_lib.lib
+bazel-out/x64_windows-fastbuild/bin/custom_exception/custom_exception.lib
+/SUBSYSTEM:CONSOLE
+/MACHINE:X64
+/DEFAULTLIB:msvcrt.lib
+/DEBUG:FASTLINK
+/INCREMENTAL:NO

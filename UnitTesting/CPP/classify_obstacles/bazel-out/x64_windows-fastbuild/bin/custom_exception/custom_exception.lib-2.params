@@ -1,0 +1,5 @@
+/nologo
+/OUT:bazel-out/x64_windows-fastbuild/bin/custom_exception/custom_exception.lib
+/MACHINE:X64
+bazel-out/x64_windows-fastbuild/bin/custom_exception/_objs/custom_exception/custom_exception.obj
+/ignore:4221
